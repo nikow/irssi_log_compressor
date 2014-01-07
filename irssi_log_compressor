@@ -16,7 +16,7 @@ for server in server_list:
     for log_file in file_list:
         if log_file.split('.')[-2]=='{0:04d}-{1:02d}-{2:02d}'.format(now.year, now.month, now.day):
             continue
-        os.system("bzip2 -zv9 '"+log_file+"'")
+        os.system("bzip2 -zv9 -- '"+log_file+"'")
 
 
     os.chdir('..')
