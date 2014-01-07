@@ -1,0 +1,22 @@
+#!/usr/bin/python2.7
+import sys
+import os
+import glob
+import datetime
+
+now = datetime.datetime.now()
+
+os.chdir(os.path.expanduser('~'))
+os.chdir('irclogs')
+server_list = glob.glob('*')
+for server in server_list:
+    print "Changing working directory to "+server
+    os.chdir(server)
+    file_list = glob.glob('*.log')
+    for log_file in file_list:
+        if log_file.split('.')[-2]=='{0:04d}-{1:02d}-{2:02d}'.format(now.year, now.month, now.day):
+            continue
+        os.system("bzip2 -zv9 '"+log_file+"'")
+
+
+    os.chdir('..')
