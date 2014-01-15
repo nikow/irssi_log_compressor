@@ -58,4 +58,8 @@ for server in server_list:
         compressFile(log_file)
     os.chdir('..')
 
-print "Data -> Compressed: {1:5} -> {2:5} {0:3.2f}%".format(global_compressed_size*100./global_data_size, global_data_size, global_compressed_size)
+if global_data_size==0:
+    print "No data to compression..."
+else:
+    print "Data -> Compressed: {1:5} -> {2:5} {0:3.2f}%".format(global_compressed_size*100./global_data_size, global_data_size, global_compressed_size)
+

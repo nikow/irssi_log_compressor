@@ -3,6 +3,8 @@ irssi_log_compressor
 This project is python script to compress my irssi log files.
 ====================
 
+2014-01-15:
+Fixed exception when there is no data to compresion.
 2014-01-11:
 Internal compressing added. Now external bzip2 is not longer needed.
 2014-01-07:
