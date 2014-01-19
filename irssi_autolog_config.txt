@@ -1,0 +1,7 @@
+Before you start using this script, two settings need to be 
+set apropriately:
+---COPY---
+/set autolog ON
+/set autolog_path ~/irclogs/$tag/$0.%4Y-%2m-%2d.log
+---COPY---
+
