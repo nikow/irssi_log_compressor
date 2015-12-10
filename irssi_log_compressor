@@ -47,7 +47,7 @@ def compressFile(filename):
 
 os.chdir(os.path.expanduser('~'))
 os.chdir('irclogs')
-server_list = glob.glob('*')
+server_list = [x for x in glob.glob('*') if os.path.isdir(x)]
 for server in server_list:
     print "Changing working directory to "+server
     os.chdir(server)
