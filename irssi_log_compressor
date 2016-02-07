@@ -3,7 +3,6 @@ import sys
 import os
 import glob
 import datetime
-import io
 import lzma
 
 now = datetime.datetime.now()
