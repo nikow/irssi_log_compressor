@@ -45,7 +45,7 @@ def compressFile(filename):
     compressed_file = lzma.open(
         filename=compressed_file_name,
         mode='wb',
-        preset=9 or lzma.PRESET_EXTREME,
+        preset=9 | lzma.PRESET_EXTREME,
     )
     data = data_file.read()
     compressed_file.write(data)
